@@ -1,0 +1,29 @@
+plugins {
+	id 'org.springframework.boot' version '2.7.5'
+	id 'io.spring.dependency-management' version '1.0.15.RELEASE'
+	id 'java'
+}
+
+group = 'com.jvm.benchmark'
+version = '0.0.1-SNAPSHOT'
+sourceCompatibility = '15'
+
+repositories {
+	mavenCentral()
+}
+
+dependencies {
+	def immutablesVersion = '2.9.2'
+
+	implementation 'org.springframework.boot:spring-boot-starter-web'
+	implementation "org.immutables:value:$immutablesVersion"
+
+	compileOnly "org.immutables:value-annotations:$immutablesVersion"
+	annotationProcessor "org.immutables:value:$immutablesVersion"
+
+	testImplementation 'org.springframework.boot:spring-boot-starter-test'
+}
+
+tasks.named('test') {
+	useJUnitPlatform()
+}
