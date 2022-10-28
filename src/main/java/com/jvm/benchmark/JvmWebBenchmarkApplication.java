@@ -4,10 +4,10 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class JvmBenchmarkApplication {
+public class JvmWebBenchmarkApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(JvmBenchmarkApplication.class, args);
+		SpringApplication.run(JvmWebBenchmarkApplication.class, args);
 	}
 
 }
