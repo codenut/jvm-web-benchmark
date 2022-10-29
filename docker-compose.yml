@@ -1,0 +1,12 @@
+version: "3"
+
+services:
+  jvm_web_benchmark:
+    image: openjdk:15
+    ports:
+      - 18080:8080
+    tty: true
+    volumes:
+      - .:/srv
+    working_dir: /srv
+    command: java -jar ./build/libs/jvm_web_benchmark-0.0.1-SNAPSHOT.jar
