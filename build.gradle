@@ -17,6 +17,8 @@ dependencies {
 
 	implementation 'org.springframework.boot:spring-boot-starter-web'
 	implementation "org.immutables:value:$immutablesVersion"
+	implementation "org.springframework.boot:spring-boot-starter-actuator"
+	implementation "io.micrometer:micrometer-registry-prometheus"
 
 	compileOnly "org.immutables:value-annotations:$immutablesVersion"
 	annotationProcessor "org.immutables:value:$immutablesVersion"
